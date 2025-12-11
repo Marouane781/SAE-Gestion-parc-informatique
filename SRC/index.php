@@ -40,6 +40,7 @@ if ($connecte) {
     </div>
     <ul>
       <li><a href="index.php">Accueil</a></li>
+      <li><a href="stats/stats.php">Statistiques</a></li>
 
       <?php if (!$connecte): ?>
           <li><a class="btn" href="login.php">Se connecter</a></li>
