@@ -281,4 +281,28 @@ Avant de détailler les fonctionnalités, voici les acteurs interagissant avec l
 * **Ergonomie :** Interface intuitive et ergonomique, via CSS  
 * **Traçabilité :** Intégrité des logs (ne peuvent être effacés via l'interface web).
 
+## **CHAPITRE 6: Exigences Fonctionnelles**
+
+### Authentification
+- L’utilisateur doit pouvoir se connecter à l’application avec un identifiant et un mot de passe.
+- Le système doit gérer plusieurs rôles : administrateur, administrateur système et technicien.
+
+### Administrateur
+- L’administrateur doit pouvoir créer un technicien dans la base de données.
+- L’administrateur doit pouvoir ajouter et gérer les systèmes d’exploitation.
+- L’administrateur doit pouvoir ajouter et gérer les constructeurs.
+- L’administrateur doit pouvoir consulter la liste des machines.
+
+### Technicien
+- Le technicien doit pouvoir consulter le parc informatique.
+- Le technicien doit pouvoir ajouter une machine via un formulaire.
+- Le technicien doit pouvoir modifier les informations d’une machine.
+
+### Administrateur système
+- L’administrateur système doit pouvoir consulter les journaux d’activité (logs) du serveur.
+- L’administrateur système doit pouvoir surveiller l’activité de la plateforme.
+
+### Statistiques
+- Les utilisateurs doivent pouvoir consulter des statistiques sur le parc informatique.
+- Le système doit afficher des graphiques et indicateurs à partir des données CSV.
    
