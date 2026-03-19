@@ -32,12 +32,12 @@ $result = mysqli_query($mysqli, "SELECT id, nom FROM constructeur ORDER BY nom")
   <header class="nav">
     <div class="brand">
       <a href="admin.php" class="brand-link">
-        <img src="../images/logo_sae.webp" alt="Logo">
+        <img src="../images/logo_sae.webp" alt="Logo de la SAE">
       </a>
       <span class="badge">Admin Web</span>
     </div>
     <ul>
-      <li><a href="admin.php">Retour admin</a></li>
+      <li><a href="admin.php" style="color: rgb(0,79,163);">Retour admin</a></li>
       <li><a class="btn secondary" href="../logout.php">Déconnexion</a></li>
     </ul>
   </header>

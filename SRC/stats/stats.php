@@ -1,5 +1,18 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['role'])) {
+    header('Location: ../login.php');
+    exit;
+}
+
+$role = $_SESSION['role'];
+if ($role !== 'tech' && $role !== 'adminweb') {
+    http_response_code(403);
+    echo 'Accès interdit.';
+    exit;
+}
+
 // Récupérer les fichiers CSV
 $devicesFile = __DIR__ . '/../data/inventory_devices.csv';
 $monitorsFile = __DIR__ . '/../data/inventory_monitors2.csv';
@@ -230,7 +243,7 @@ $probGarantieHors = ($garantieHors / $totalDevices) * 100;
       <span class="badge">Statistiques</span>
     </div>
     <ul>
-      <li><a href="../index.php">Accueil</a></li>
+      <li><a href="../index.php" style="color: rgb(0,79,163);">Accueil</a></li>
     </ul>
   </header>
 

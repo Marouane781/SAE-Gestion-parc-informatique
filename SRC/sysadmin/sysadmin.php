@@ -56,12 +56,12 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'sysadmin') {
     <header class="nav">
         <div class="brand">
             <a href="../index.php" class="brand-link">
-                <img src="../images/logo_sae.webp" alt="Logo" />
+                <img src="../images/logo_sae.webp" alt="Logo de la SAE" />
             </a>
             <span class="badge">Administrateur Système</span>
         </div>
         <ul>
-            <li><a href="../index.php">Accueil</a></li>
+            <li><a href="../index.php" style="color: rgb(0,79,163);">Accueil</a></li>
             <li><a href="../logout.php" class="btn secondary">Déconnexion</a></li>
         </ul>
     </header>
@@ -76,7 +76,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'sysadmin') {
         <section class="card">
             <h2>Gestion du système</h2>
             <ul>
-                <li><a href="logs.php" class="btn">Voir les journaux d'activité</a></li>
+                <li><a href="logs.php" class="btn" style="background-color: rgb(43,95,45);">Voir les journaux d'activité</a></li>
             </ul>
         </section>
     </main>

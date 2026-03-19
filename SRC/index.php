@@ -34,13 +34,17 @@ if ($connecte) {
   <header class="nav">
     <div class="brand">
       <a href="index.php" class="brand-link">
-        <img src="images/logo_sae.webp" alt="Logo">
+        <img src="images/logo_sae.webp" alt="Logo de la SAE">
       </a>
       <span class="badge"><?php echo $connecte ? "Connecté" : "Invité"; ?></span>
     </div>
     <ul>
-      <li><a href="index.php">Accueil</a></li>
-      <li><a href="stats/stats.php">Statistiques</a></li>
+      <li><a href="index.php" style="color: rgb(0, 79, 163);">Accueil</a></li>
+
+      <?php if ($connecte && ($_SESSION['role'] === 'adminweb' || $_SESSION['role'] === 'tech')): ?>
+          <li><a href="stats/stats.php" style="color: rgb(0,79,163);">Statistiques</a></li>
+      <?php endif; ?>
+
 
       <?php if (!$connecte): ?>
           <li><a class="btn" href="login.php">Se connecter</a></li>
@@ -58,9 +62,9 @@ if ($connecte) {
         <h1>Gérez votre parc informatique.</h1>
         <p class="note">Cette page est désormais <b>dynamique PHP</b> pour la SAÉ 3 – FI 2.</p>
         <div class="kpis">
-          <div class="kpi"><div class="badge">UC</div><h3>128</h3><div class="note">Unités centrales</div></div>
+          <div class="kpi"><div class="badge">UC</div><h2>128</h2><div class="note">Unités centrales</div></div>
           <div class="kpi"><div class="badge">Moniteurs</div><h3>212</h3><div class="note">Écrans suivis</div></div>
-          <div class="kpi"><div class="badge">Rebut</div><h3>7</h3><div class="note">En attente</div></div>
+          <div class="kpi"><div class="badge">Rebut</div><h4>7</h4><div class="note">En attente</div></div>
         </div>
         <div class="actions" style="margin-top:16px">
           <a class="button" href="<?php echo $lienEspace; ?>">
@@ -69,7 +73,7 @@ if ($connecte) {
         </div>
       </div>
       <div class="card">
-        <h2>Fonctionnalités clés</h2>
+        <h5>Fonctionnalités clés</h5>
         <div class="features">
           <div><div class="badge">Inventaire</div><p>Liste des UC et moniteurs, filtres par bâtiment/salle.</p></div>
           <div><div class="badge">CSV</div><p>Import/Export CSV pour des mises à jour en masse.</p></div>

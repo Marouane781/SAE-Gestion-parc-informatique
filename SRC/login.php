@@ -67,13 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <header class="nav">
     <div class="brand">
       <a href="index.php" class="brand-link">
-        <img src="images/logo_sae.webp" alt="Logo">
+        <img src="images/logo_sae.webp" alt="Logo de la SAE">
         
       </a>
       <span class="badge">Connexion</span>
     </div>
     <ul>
-      <li><a href="index.php">Accueil</a></li>
+      <li><a href="index.php" style="color: rgb(0,79,163);">Accueil</a></li>
     </ul>
   </header>
 
@@ -85,10 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="note" style="color:#DC3545;"><?php echo htmlspecialchars($erreur); ?></p>
       <?php else: ?>
         <p class="note">
-          Utilisez les identifiants fournis dans le sujet
-          (ex. <code>adminweb/adminweb</code>,
-          <code>sysadmin/sysadmin</code>,
-          <code>tech1/tech1</code>).
+          Utilisez les identifiants fournis dans le sujet.
         </p>
       <?php endif; ?>
 
@@ -113,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </label>
         <div class="actions">
           <button class="button" type="submit">Se connecter</button>
-          <a class="button secondary" href="index.php">Retour</a>
+          <a class="button secondary" href="index.php" style="background-color: rgb(0,79,163);">Retour</a>
         </div>
         <p class="note">
           Cette version utilise une authentification réelle côté serveur (mysqli).
